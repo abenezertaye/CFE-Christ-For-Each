@@ -1,14 +1,16 @@
-const cards = document.querySelectorAll('.cards');
+const hiddenElements = document.querySelectorAll('.hidden');
 
-  // 2. Create an observer (built-in browser API)
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show'); // reveal animation
-        observer.unobserve(entry.target);   // optional: stop observing
-      }
-    });
-  }, { threshold: 0.2 }); // reveal when 20% of card is visible
+const observer = new IntersectionObserver(entries=>{
 
-  // 3. Observe each card
-  cards.forEach(card => observer.observe(card));
+  entries.forEach(entry=>{
+    console.log(entry);
+
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }else{
+      entry.target.classList.remove('show');
+    }
+  })
+});
+
+hiddenElements.forEach(el=>observer.observe(el));
