@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'outfit-bold';
+  src: url(fonts/outfit/static/Outfit-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'Outfit-regular';
+  src: url(fonts/outfit/static/Outfit-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'figtree';
+  src: url(fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'young-serif';
+  src: url(fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'zelando';
+  src: url(fonts/Zalando_Sans_Expanded/ZalandoSansExpanded-VariableFont_wght.ttf);
+}
+
+body{
+  margin:0;
+  padding-bottom:100px;
+  background-color:#111;
+  color:white;
+  font-family: 'outfit-regular';
+  min-width:100%;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+header {
+  position:fixed;
+  z-index: 10;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  width: 90%;                /* <-- 90% of parent */
+  padding: 0 ;        /* left & right padding inside header */
+  margin-top:20px; 
+  padding-left:5%;
+  gap: 0.75rem;
+  border-radius: 4px;
+}
+
+
+button{
+  display:block;
+  margin-top:10px;
+  background-color:rgb(255, 221, 0);
+  height:40px;
+  width:80px;
+  border:0px;
+  border-radius:20px;
+  font-family: 'figtree';
+  font-size:1rem;
+  font-weight:bold;
+  cursor: pointer;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+footer{
+  height:50px;
+  display:flex;
+  align-items: center;
+  background-color: rgba(4, 83, 4, 0.485);
+  padding:1rem;
+  gap:1rem;
+  position:relative;
+}
